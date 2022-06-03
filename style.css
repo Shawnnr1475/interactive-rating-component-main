@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+
+    --btn-color:  hsl(25, 97%, 53%);
+
+    --p-color: hsl(217, 12%, 63%);
+    --rate-color:hsl(210deg 32% 22%);
+    --card-color: hsl(213, 19%, 18%);
+    --main-color: hsl(216, 12%, 8%);
+
+    --font: 'Overpass', sans-serif;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    font-family: var(--font);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    width: var(--desktop-width);
+    height: 100vh;
+}
+
+.card{
+    background-color: var(--card-color);
+    width: 25%;
+    height: 50%;
+    min-height: 330px;
+    border-radius: 5%;
+    padding: 25px;
+}
+
+.rating-page{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.7s;
+}
+
+.start-container{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rate-color);
+    border-radius: 50%;
+
+}
+
+
+.content>h1{
+    color: white;
+    font-size: 30px;
+}
+
+.content>p{
+    color: var(--p-color);
+    font-size: 15px;
+}
+
+.rating > p{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rate-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.rate:hover{
+    background-color: var(--p-color);
+}
+
+.active{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.7s;
+    background-color: var(--btn-color);
+}
+
+
+button{
+    width: 100%;
+    height: 45px;
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+
+button:hover{
+    background-color: white;
+    color: var(--btn-color);
+}
+
+
+/* =============================================== */
+
+.thank-you{
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size:15px;
+    transition: 0.7s;
+    
+}
+
+.message{
+    text-align: center;
+    color: var(--p-color);
+}
+
+@media only screen and (max-width:720px){
+    main{
+        width: var(--mobile-width);
+    }
+    .card{
+        width: 350px;
+    }
+    
+}
+
